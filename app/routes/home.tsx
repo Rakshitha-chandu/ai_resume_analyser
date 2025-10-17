@@ -21,7 +21,7 @@ export default function Home() {
 
   useEffect(() => {
     if(!isLoading && !auth.isAuthenticated) navigate('/auth?next=/');
-  }, [isLoading,auth.isAuthenticated,navigate]);
+  }, [auth.isAuthenticated]);
 
 
   return <main className="bg-[url('/images/bg-main.svg')] bg-cover">
