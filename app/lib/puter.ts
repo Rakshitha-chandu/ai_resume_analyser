@@ -41,7 +41,7 @@ declare global {
     };
   }
 }
-// to define the store where we store our data
+
 interface PuterStore {
   isLoading: boolean;
   error: string | null;
@@ -95,10 +95,10 @@ interface PuterStore {
   init: () => void;
   clearError: () => void;
 }
-// gets puter api quickly to the app without repeating the loading part
+
 const getPuter = (): typeof window.puter | null =>
   typeof window !== "undefined" && window.puter ? window.puter : null;
-//a hook 
+
 export const usePuterStore = create<PuterStore>((set, get) => {
   const setError = (msg: string) => {
     set({
@@ -147,7 +147,7 @@ export const usePuterStore = create<PuterStore>((set, get) => {
           auth: {
             user: null,
             isAuthenticated: false,
-            signIn: get().auth.signIn,// wrapper for puter functions
+            signIn: get().auth.signIn,
             signOut: get().auth.signOut,
             refreshUser: get().auth.refreshUser,
             checkAuthStatus: get().auth.checkAuthStatus,
@@ -298,7 +298,7 @@ export const usePuterStore = create<PuterStore>((set, get) => {
       setError("Puter.js not available");
       return;
     }
-    return puter.fs.upload(files);// a puter function wrapped in upload 
+    return puter.fs.upload(files);
   };
 
   const deleteFile = async (path: string) => {
@@ -350,7 +350,7 @@ export const usePuterStore = create<PuterStore>((set, get) => {
           ],
         },
       ],
-      { model: "claude-sonnet-4" }
+      { model: "claude-3-7-sonnet" }
     ) as Promise<AIResponse | undefined>;
   };
 
