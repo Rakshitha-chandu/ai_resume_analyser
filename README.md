@@ -1,87 +1,103 @@
-# Welcome to React Router!
+# 🤖 Resu-Match: AI-Powered Applicant Tracking System (ATS) Analyzer  
 
-A modern, production-ready template for building full-stack React applications using React Router.
+**Resu-Match** is an enterprise-ready, **serverless AI web application** designed to optimize resumes by simulating an **Applicant Tracking System (ATS)** and providing **AI-driven feedback** against specific job descriptions.  
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
-
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+This project showcases full-stack development, AI integration, and scalable serverless deployment — ideal for modern hiring analytics and resume optimization.
 
 ---
 
-Built with ❤️ using React Router.
+## 🌟 Overview  
+
+Modern hiring processes rely heavily on ATS filters that screen resumes before they reach human recruiters.  
+**Resu-Match** empowers job seekers by analyzing their resumes against job descriptions using **GPT/Claude-based AI models**, providing:  
+
+- ✅ ATS compatibility scores  
+- 🧠 Keyword gap analysis  
+- 🗂️ Section-wise actionable feedback  
+
+This end-to-end pipeline highlights real-world AI implementation in a scalable, serverless environment.
+
+---
+
+## 🧰 Tools & Technologies  
+
+| Category | Technology | Purpose |
+|-----------|-------------|----------|
+| **Frontend** | React.js (Vite), TypeScript | Fast, modular, and type-safe UI development |
+| **Styling** | Tailwind CSS V4 | Modern and responsive design framework |
+| **State Management** | Zustand | Lightweight and scalable state handling |
+| **Backend / Serverless** | Puter.js | Auth, Storage, Database (KV Store), and AI in-browser |
+| **AI Models** | GPT / Claude | Resume parsing, scoring, and improvement suggestions |
+| **Utilities** | pdfjs-dist | Converts PDF resumes into viewable PNGs |
+| **Development Tools** | Git, GitHub, WebStorm | Version control and productivity |
+
+---
+
+## ⚙️ Workflow Summary  
+
+1. **User Authentication:**  
+   Secure sign-in using **Puter Auth** for a serverless, identity-managed workflow.  
+
+2. **Resume Upload:**  
+   Users upload a **PDF resume** and enter job title, company, and job description.  
+
+3. **AI-Powered Analysis:**  
+   - Converts the resume into an image preview.  
+   - Sends the file and job data to the **AI engine (GPT/Claude)**.  
+   - Receives structured JSON feedback with an **ATS score and improvement areas**.  
+   - Stores results in the **Pewter KV database**.  
+
+4. **Dashboard & Insights:**  
+   Displays the **ATS score, keyword analysis, and detailed recommendations** across categories like *Tone, Content, Structure,* and *Skills*.  
+
+5. **User History:**  
+   Authenticated users can view all previous analyses directly on the homepage.
+
+---
+
+## 📊 Dashboard & Results  
+
+| Feature | Description |
+|----------|--------------|
+| **ATS Score Gauge** | Displays an overall compatibility score with the job description. |
+| **Skills Gap Analysis** | Identifies missing or weak keywords for better alignment. |
+| **Structured Feedback** | Categorized insights on tone, structure, and skills. |
+| **Interactive Resume Preview** | Click to view full PDF alongside AI suggestions. |
+
+---
+
+## 🖼️ Screenshots  
+
+> Add your screenshots inside a `/images` folder in your project and replace the filenames below.  
+
+### 🔹 Dashboard Overview  
+![Dashboard Overview](images/dashboard_overview.png)  
+
+### 🔹 Resume Upload Page  
+![Resume Upload](images/upload_page.png)  
+
+### 🔹 AI Feedback & Score Visualization  
+![Feedback Results](images/feedback_results.png)  
+
+### 🔹 Skills Gap Analysis Section  
+![Skills Gap](images/skills_gap.png)  
+
+---
+
+## ▶️ How to Run  
+
+### **Prerequisites**  
+- Node.js (LTS version)  
+- Pewter.js account for serverless AI, storage, and auth services  
+
+### **Setup Instructions**  
+```bash
+# Clone the repository
+git clone [YOUR-GITHUB-REPO-URL]
+cd ai-resume-analyzer
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
