@@ -79,9 +79,6 @@ This end-to-end pipeline highlights real-world AI implementation in a scalable, 
 ### 🔹 AI Feedback & Score Visualization  
 ![Feedback Results](images/feedback_results.png)  
 
-### 🔹 Skills Gap Analysis Section  
-![Skills Gap](images/skills_gap.png)  
-
 ---
 
 ## ▶️ How to Run  
